@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        tools:context="masterthesis.master.de.vehicledeviceclient.MainActivity">
+
+
+        <EditText
+            android:id="@+id/vehicleIDEdit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:hint="Vehicle ID" />
+
+        <Button
+            android:id="@+id/newOrderListenerButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/vehicleIDEdit"
+            android:layout_centerHorizontal="true"
+            android:onClick="newOrderListener"
+            android:text="Load current order" />
+
+        <LinearLayout
+            android:id="@+id/buttonLayout"
+            android:layout_below="@+id/newOrderListenerButton"
+            android:layout_width="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/statusButton"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/newOrderListenerButton"
+                android:layout_centerHorizontal="true"
+                android:onClick="changeOrderStatus"
+                android:text="Start transport" />
+
+            <Button
+                android:id="@+id/finishButton"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/statusButton"
+                android:layout_centerHorizontal="true"
+                android:onClick="onClickFinish"
+                android:text="Finish transport" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/reinsert_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/buttonLayout"
+            android:layout_centerHorizontal="true"
+            android:onClick="reinsertOrder"
+            android:text="Reinsert orders" />
+
+        <Button
+            android:id="@+id/listenForNewOrderButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/reinsert_button"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="50dp"
+            android:onClick="newVehicleOrderListener"
+            android:text="Start listening for new order" />
+
+        <Button
+            android:id="@+id/stopListenForNewOrderButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/listenForNewOrderButton"
+            android:layout_centerHorizontal="true"
+            android:onClick="stopNewVehicleOrderListener"
+            android:text="Stop listening for new order" />
+
+        <TextView
+            android:id="@+id/textID"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/stopListenForNewOrderButton"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="50dp"
+            android:text="ORDER"
+            android:textSize="30dp" />
+
+        <TextView
+            android:id="@+id/newOrderTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textID"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:textSize="20dp" />
+
+    </RelativeLayout>
+</ScrollView>
